@@ -1,0 +1,55 @@
+/* index.css - reset + styles globaux */
+:root{
+  --bg-dark: #1b0033;        /* fond violet foncé */
+  --panel-dark: #2d0b52;     /* carte sombre */
+  --panel-light: #ffffff;    /* fond blanc gauche */
+  --text-light: #ffffff;
+  --muted: #bdb6c9;
+  --accent: rgb(52, 143, 235);
+  --card-radius: 12px;
+  --gap: 18px;
+}
+
+/* Reset minimal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height: 1.3;
+}
+
+/* liens par défaut */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* container général centré si besoin */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* petites utilitaires */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
